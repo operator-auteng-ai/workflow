@@ -23,8 +23,16 @@ body {
   .slide {
     width: 100vw;
     height: auto;
-    min-height: 100vw * 0.5625;
-    aspect-ratio: 16/9;
+    min-height: auto;
+    aspect-ratio: auto;
+    overflow: visible;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .slide-wrapper {
+    gap: 1rem;
+    padding: 1rem 0;
   }
 }
 

@@ -39,21 +39,21 @@
   <div class="slide-wrapper">
 
     <!-- ========== SLIDE 1: Title ========== -->
-    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col items-center justify-center px-16">
+    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col items-center justify-center px-6 md:px-16">
       <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
       <div class="relative z-10 text-center">
         <div class="inline-block mb-6">
           <span class="tag border-blue-400/50 text-blue-400 bg-blue-500/15">Build in Public</span>
         </div>
-        <h1 class="text-7xl font-black tracking-tight mb-4">
+        <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-4">
           <span class="gradient-text">AutEng</span> <span class="text-white">Workflow</span>
         </h1>
-        <p class="text-2xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-8">
+        <p class="text-lg md:text-2xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-8">
           A doc-driven system for building with AI.<br>
           Everything has its place. No duplication. The prompt is just<br>
           <span class="font-mono text-blue-400">"Implement Phase 1"</span>
         </p>
-        <div class="flex items-center justify-center gap-6 text-sm text-white/70">
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-sm text-white/70">
           <span class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-green-400"></span>
             One person + Claude Code
@@ -67,13 +67,13 @@
     </section>
 
     <!-- ========== SLIDE 2: Everything Has Its Place ========== -->
-    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-20">
+    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-6 md:px-20">
       <div class="mb-6">
         <span class="tag border-emerald-400/50 text-emerald-400 bg-emerald-500/15 mb-4">Core Principle</span>
-        <h2 class="text-4xl font-bold mt-4 mb-2">Everything has its place. <span class="gradient-text">No duplication.</span></h2>
-        <p class="text-white/80 text-lg">Each doc owns a domain. References between docs, never copies.</p>
+        <h2 class="text-2xl md:text-4xl font-bold mt-4 mb-2">Everything has its place. <span class="gradient-text">No duplication.</span></h2>
+        <p class="text-white/80 text-base md:text-lg">Each doc owns a domain. References between docs, never copies.</p>
       </div>
-      <div class="grid grid-cols-3 gap-3 mb-5">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-5">
         <div class="doc-card border-l-2 border-l-purple-400">
           <div class="doc-label font-mono text-purple-400 mb-1">VISION.md</div>
           <div class="doc-desc text-white/75">Owns: product scope, users, pricing, success metrics</div>
@@ -99,7 +99,7 @@
           <div class="doc-desc text-white/75">Owns: session protocol, read order, handoff process</div>
         </div>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-4">
         <div class="flex-1 flex items-center gap-3 bg-white/[0.05] rounded-lg px-4 py-2.5 border border-white/[0.12]">
           <div class="text-base">&#128279;</div>
           <div class="text-xs text-white/75">
@@ -116,44 +116,44 @@
     </section>
 
     <!-- ========== SLIDE 3: Start High, Expand ========== -->
-    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-20">
-      <div class="mb-7">
+    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-6 md:px-20">
+      <div class="mb-5 md:mb-7">
         <span class="tag border-purple-400/50 text-purple-400 bg-purple-500/15 mb-4">The Hierarchy</span>
-        <h2 class="text-4xl font-bold mt-4 mb-2">Start high level. <span class="gradient-text">Expand as you go.</span></h2>
+        <h2 class="text-2xl md:text-4xl font-bold mt-4 mb-2">Start high level. <span class="gradient-text">Expand as you go.</span></h2>
       </div>
-      <div class="flex items-start gap-5">
+      <div class="flex flex-col md:flex-row items-start gap-5">
         <!-- Zoom levels -->
-        <div class="flex-1 space-y-3">
+        <div class="flex-1 space-y-3 w-full">
           <!-- Level 1: VISION -->
-          <div class="rounded-xl bg-gradient-to-r from-purple-500/[0.12] to-transparent border border-purple-500/30 p-5">
+          <div class="rounded-xl bg-gradient-to-r from-purple-500/[0.12] to-transparent border border-purple-500/30 p-4 md:p-5">
             <div class="flex items-center gap-3 mb-2">
-              <div class="w-7 h-7 rounded-full bg-purple-500/25 flex items-center justify-center text-purple-300 font-mono text-xs font-bold">1</div>
+              <div class="w-7 h-7 rounded-full bg-purple-500/25 flex items-center justify-center text-purple-300 font-mono text-xs font-bold shrink-0">1</div>
               <span class="font-bold text-purple-300 text-sm">VISION.md</span>
-              <span class="text-xs text-white/55 ml-auto">highest level</span>
+              <span class="text-xs text-white/55 ml-auto hidden md:inline">highest level</span>
             </div>
-            <p class="text-sm text-white/80 ml-10">What are we building and why? Product scope, target users, pricing, principles.</p>
+            <p class="text-sm text-white/80 md:ml-10">What are we building and why? Product scope, target users, pricing, principles.</p>
           </div>
           <!-- Level 2: ARCH -->
-          <div class="rounded-xl bg-gradient-to-r from-blue-500/[0.12] to-transparent border border-blue-500/30 p-5 ml-6">
+          <div class="rounded-xl bg-gradient-to-r from-blue-500/[0.12] to-transparent border border-blue-500/30 p-4 md:p-5 md:ml-6">
             <div class="flex items-center gap-3 mb-2">
-              <div class="w-7 h-7 rounded-full bg-blue-500/25 flex items-center justify-center text-blue-300 font-mono text-xs font-bold">2</div>
+              <div class="w-7 h-7 rounded-full bg-blue-500/25 flex items-center justify-center text-blue-300 font-mono text-xs font-bold shrink-0">2</div>
               <span class="font-bold text-blue-300 text-sm">ARCH.md</span>
-              <span class="text-xs text-white/55 ml-auto">system level</span>
+              <span class="text-xs text-white/55 ml-auto hidden md:inline">system level</span>
             </div>
-            <p class="text-sm text-white/80 ml-10">How does it work? Mermaid diagrams, component boundaries, DB schema, data flow.</p>
+            <p class="text-sm text-white/80 md:ml-10">How does it work? Mermaid diagrams, component boundaries, DB schema, data flow.</p>
           </div>
           <!-- Level 3: PLAN -->
-          <div class="rounded-xl bg-gradient-to-r from-cyan-500/[0.12] to-transparent border border-cyan-500/30 p-5 ml-12">
+          <div class="rounded-xl bg-gradient-to-r from-cyan-500/[0.12] to-transparent border border-cyan-500/30 p-4 md:p-5 md:ml-12">
             <div class="flex items-center gap-3 mb-2">
-              <div class="w-7 h-7 rounded-full bg-cyan-500/25 flex items-center justify-center text-cyan-300 font-mono text-xs font-bold">3</div>
+              <div class="w-7 h-7 rounded-full bg-cyan-500/25 flex items-center justify-center text-cyan-300 font-mono text-xs font-bold shrink-0">3</div>
               <span class="font-bold text-cyan-300 text-sm">PLAN.md</span>
-              <span class="text-xs text-white/55 ml-auto">execution level</span>
+              <span class="text-xs text-white/55 ml-auto hidden md:inline">execution level</span>
             </div>
-            <p class="text-sm text-white/80 ml-10">In what order? Phases, dependencies, exit criteria. <span class="text-white/90">References ARCH &mdash; never re-describes it.</span></p>
+            <p class="text-sm text-white/80 md:ml-10">In what order? Phases, dependencies, exit criteria. <span class="text-white/90">References ARCH &mdash; never re-describes it.</span></p>
           </div>
         </div>
         <!-- Right side: the key insight -->
-        <div class="w-72 shrink-0">
+        <div class="w-full md:w-72 shrink-0">
           <div class="rounded-xl bg-white/[0.05] border border-white/[0.15] p-5 space-y-4">
             <div class="text-xs text-white/75 font-semibold uppercase tracking-wider">The pattern</div>
             <div class="space-y-3">
@@ -179,13 +179,13 @@
     </section>
 
     <!-- ========== SLIDE 4: ARCH = Architecture Only ========== -->
-    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-20">
+    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-6 md:px-20">
       <div class="mb-6">
         <span class="tag border-blue-400/50 text-blue-400 bg-blue-500/15 mb-4">ARCH.md</span>
-        <h2 class="text-4xl font-bold mt-4 mb-2">Architecture and diagrams. <span class="gradient-text">That's it.</span></h2>
-        <p class="text-white/80 text-lg">No class-level design. No implementation code. No prose that belongs elsewhere.</p>
+        <h2 class="text-2xl md:text-4xl font-bold mt-4 mb-2">Architecture and diagrams. <span class="gradient-text">That's it.</span></h2>
+        <p class="text-white/80 text-base md:text-lg">No class-level design. No implementation code. No prose that belongs elsewhere.</p>
       </div>
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Left: What ARCH is -->
         <div>
           <div class="text-xs uppercase tracking-widest text-green-400 mb-3 font-semibold flex items-center gap-1.5">
@@ -243,13 +243,13 @@
     </section>
 
     <!-- ========== SLIDE 5: The Prompt ========== -->
-    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-20">
+    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-6 md:px-20">
       <div class="mb-6">
         <span class="tag border-amber-400/50 text-amber-400 bg-amber-500/15 mb-4">The Payoff</span>
-        <h2 class="text-4xl font-bold mt-4 mb-2">The prompt becomes <span class="gradient-text">trivial.</span></h2>
-        <p class="text-white/80 text-lg">Claude reads the docs. The docs <em>are</em> the prompt.</p>
+        <h2 class="text-2xl md:text-4xl font-bold mt-4 mb-2">The prompt becomes <span class="gradient-text">trivial.</span></h2>
+        <p class="text-white/80 text-base md:text-lg">Claude reads the docs. The docs <em>are</em> the prompt.</p>
       </div>
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Left: terminal -->
         <div class="terminal">
           <div class="terminal-bar">
@@ -258,7 +258,7 @@
             <div class="terminal-dot bg-green-500/70"></div>
             <span class="text-xs text-white/50 ml-2">claude code</span>
           </div>
-          <div class="p-5 space-y-4 text-sm">
+          <div class="p-4 md:p-5 space-y-4 text-sm">
             <div>
               <div class="text-amber-400 text-xs mb-1">SESSION START &mdash; reads automatically:</div>
               <div class="text-white/60 space-y-0.5">
@@ -318,13 +318,13 @@
     </section>
 
     <!-- ========== SLIDE 6: Iterate with docs/v1/ ========== -->
-    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-20">
+    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col justify-center px-6 md:px-20">
       <div class="mb-6">
         <span class="tag border-cyan-400/50 text-cyan-400 bg-cyan-500/15 mb-4">Iteration</span>
-        <h2 class="text-4xl font-bold mt-4 mb-2">MVP ships. Then <span class="gradient-text">iterate again.</span></h2>
-        <p class="text-white/80 text-lg">Create <span class="font-mono text-white/90">docs/v1/</span> &mdash; same structure, next version.</p>
+        <h2 class="text-2xl md:text-4xl font-bold mt-4 mb-2">MVP ships. Then <span class="gradient-text">iterate again.</span></h2>
+        <p class="text-white/80 text-base md:text-lg">Create <span class="font-mono text-white/90">docs/v1/</span> &mdash; same structure, next version.</p>
       </div>
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Left: directory structure -->
         <div class="terminal">
           <div class="terminal-bar">
@@ -333,7 +333,7 @@
             <div class="terminal-dot bg-green-500/70"></div>
             <span class="text-xs text-white/50 ml-2">project structure</span>
           </div>
-          <div class="p-5 text-[13px] leading-relaxed">
+          <div class="p-4 md:p-5 text-[12px] md:text-[13px] leading-relaxed">
             <div class="text-white/70">saas/</div>
             <div class="text-white/70">&boxvr;&HorizontalLine;&HorizontalLine; docs/                  <span class="text-white/50"># MVP &mdash; current arch</span></div>
             <div class="text-white/80">&boxv;   &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-blue-400">ARCH.md</span>          <span class="text-white/50"># system of record</span></div>
@@ -385,30 +385,30 @@
     </section>
 
     <!-- ========== SLIDE 7: CTA ========== -->
-    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col items-center justify-center px-16">
+    <section class="slide bg-[#0a0a0a] glow border-glow rounded-2xl flex flex-col items-center justify-center px-6 md:px-16">
       <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
       <div class="relative z-10 text-center">
-        <h2 class="text-5xl font-black mb-4">This is how I build now.</h2>
-        <p class="text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-8">
+        <h2 class="text-3xl md:text-5xl font-black mb-4">This is how I build now.</h2>
+        <p class="text-lg md:text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-8">
           The docs <em>are</em> the prompt. The AI <em>is</em> the engineer.<br>
           The system scales to any project, any version.
         </p>
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15]">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-3 mb-8">
+          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15] w-full md:w-auto">
             <div class="text-lg">&#128196;</div>
             <div class="text-left">
               <div class="text-sm font-semibold text-white/95">Docs drive decisions</div>
               <div class="text-xs text-white/65">not chat history</div>
             </div>
           </div>
-          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15]">
+          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15] w-full md:w-auto">
             <div class="text-lg">&#128683;</div>
             <div class="text-left">
               <div class="text-sm font-semibold text-white/95">No duplication</div>
               <div class="text-xs text-white/65">everything has its place</div>
             </div>
           </div>
-          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15]">
+          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15] w-full md:w-auto">
             <div class="text-lg">&#128257;</div>
             <div class="text-left">
               <div class="text-sm font-semibold text-white/95">Same system, every version</div>
@@ -417,7 +417,7 @@
           </div>
         </div>
         <!-- Links -->
-        <div class="flex items-center justify-center gap-6 text-sm font-mono">
+        <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm font-mono">
           <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/WORKFLOW.md" class="file-link" target="_blank">WORKFLOW.md</a>
           <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/docs/ARCH.md" class="file-link" target="_blank">ARCH.md</a>
           <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/docs/PLAN.md" class="file-link" target="_blank">PLAN.md</a>
