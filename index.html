@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <script>
     tailwind.config = {
       theme: {
@@ -33,81 +34,6 @@
       }
     }
   </script>
-  <style>
-    body { background: #050505; }
-    .slide {
-      width: 1200px;
-      height: 675px;
-      position: relative;
-      overflow: hidden;
-    }
-    .slide-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem 0;
-    }
-    .glow { box-shadow: 0 0 80px rgba(59, 130, 246, 0.1); }
-    .border-glow { border: 1px solid rgba(59, 130, 246, 0.25); }
-    .gradient-text {
-      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .tag {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border: 1px solid;
-    }
-    .doc-card {
-      background: #151515;
-      border: 1px solid #2a2a2a;
-      border-radius: 0.5rem;
-      padding: 0.625rem 0.875rem;
-      text-align: left;
-    }
-    .file-link {
-      color: rgba(96, 165, 250, 0.8);
-      text-decoration: none;
-      border-bottom: 1px dashed rgba(96, 165, 250, 0.4);
-      transition: all 0.15s;
-    }
-    .file-link:hover {
-      color: rgba(96, 165, 250, 1);
-      border-bottom-color: rgba(96, 165, 250, 0.7);
-    }
-    .terminal {
-      background: #0e0e0e;
-      border: 1px solid #252525;
-      border-radius: 0.75rem;
-      font-family: 'JetBrains Mono', monospace;
-      overflow: hidden;
-    }
-    .terminal-bar {
-      background: #181818;
-      padding: 0.5rem 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.375rem;
-      border-bottom: 1px solid #252525;
-    }
-    .terminal-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-    }
-    @media (max-width: 1200px) {
-      .slide {
-        width: 100vw;
-        height: auto;
-        min-height: 100vw * 0.5625;
-        aspect-ratio: 16/9;
-      }
-    }
-  </style>
 </head>
 <body class="text-white font-sans antialiased">
   <div class="slide-wrapper">
@@ -117,24 +43,24 @@
       <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
       <div class="relative z-10 text-center">
         <div class="inline-block mb-6">
-          <span class="tag border-blue-400/50 text-blue-400 bg-blue-500/15 text-sm">Build in Public</span>
+          <span class="tag border-blue-400/50 text-blue-400 bg-blue-500/15">Build in Public</span>
         </div>
         <h1 class="text-7xl font-black tracking-tight mb-4">
           <span class="gradient-text">AutEng</span> <span class="text-white">Workflow</span>
         </h1>
-        <p class="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-8">
+        <p class="text-2xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-8">
           A doc-driven system for building with AI.<br>
           Everything has its place. No duplication. The prompt is just<br>
           <span class="font-mono text-blue-400">"Implement Phase 1"</span>
         </p>
-        <div class="flex items-center justify-center gap-6 text-sm text-white/50">
+        <div class="flex items-center justify-center gap-6 text-sm text-white/70">
           <span class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-green-400"></span>
             One person + Claude Code
           </span>
-          <span class="text-white/20">|</span>
+          <span class="text-white/35">|</span>
           <span>Prediction Market SaaS</span>
-          <span class="text-white/20">|</span>
+          <span class="text-white/35">|</span>
           <span>Idea to deploy in days</span>
         </div>
       </div>
@@ -145,45 +71,45 @@
       <div class="mb-6">
         <span class="tag border-emerald-400/50 text-emerald-400 bg-emerald-500/15 mb-4">Core Principle</span>
         <h2 class="text-4xl font-bold mt-4 mb-2">Everything has its place. <span class="gradient-text">No duplication.</span></h2>
-        <p class="text-white/60 text-lg">Each doc owns a domain. References between docs, never copies.</p>
+        <p class="text-white/80 text-lg">Each doc owns a domain. References between docs, never copies.</p>
       </div>
       <div class="grid grid-cols-3 gap-3 mb-5">
         <div class="doc-card border-l-2 border-l-purple-400">
-          <div class="text-[11px] font-mono text-purple-400 mb-1">VISION.md</div>
-          <div class="text-[11px] text-white/60">Owns: product scope, users, pricing, success metrics</div>
+          <div class="doc-label font-mono text-purple-400 mb-1">VISION.md</div>
+          <div class="doc-desc text-white/75">Owns: product scope, users, pricing, success metrics</div>
         </div>
         <div class="doc-card border-l-2 border-l-blue-400">
-          <div class="text-[11px] font-mono text-blue-400 mb-1">ARCH.md</div>
-          <div class="text-[11px] text-white/60">Owns: system diagrams, DB schema, data flow, boundaries</div>
+          <div class="doc-label font-mono text-blue-400 mb-1">ARCH.md</div>
+          <div class="doc-desc text-white/75">Owns: system diagrams, DB schema, data flow, boundaries</div>
         </div>
         <div class="doc-card border-l-2 border-l-cyan-400">
-          <div class="text-[11px] font-mono text-cyan-400 mb-1">PLAN.md</div>
-          <div class="text-[11px] text-white/60">Owns: phased implementation order, exit criteria</div>
+          <div class="doc-label font-mono text-cyan-400 mb-1">PLAN.md</div>
+          <div class="doc-desc text-white/75">Owns: phased implementation order, exit criteria</div>
         </div>
         <div class="doc-card border-l-2 border-l-green-400">
-          <div class="text-[11px] font-mono text-green-400 mb-1">TAXONOMY.md</div>
-          <div class="text-[11px] text-white/60">Owns: canonical names, enums, shared vocabulary</div>
+          <div class="doc-label font-mono text-green-400 mb-1">TAXONOMY.md</div>
+          <div class="doc-desc text-white/75">Owns: canonical names, enums, shared vocabulary</div>
         </div>
         <div class="doc-card border-l-2 border-l-amber-400">
-          <div class="text-[11px] font-mono text-amber-400 mb-1">CODING-STANDARDS.md</div>
-          <div class="text-[11px] text-white/60">Owns: quality bars, security rules, definition of done</div>
+          <div class="doc-label font-mono text-amber-400 mb-1">CODING-STANDARDS.md</div>
+          <div class="doc-desc text-white/75">Owns: quality bars, security rules, definition of done</div>
         </div>
         <div class="doc-card border-l-2 border-l-rose-400">
-          <div class="text-[11px] font-mono text-rose-400 mb-1">WORKFLOW.md</div>
-          <div class="text-[11px] text-white/60">Owns: session protocol, read order, handoff process</div>
+          <div class="doc-label font-mono text-rose-400 mb-1">WORKFLOW.md</div>
+          <div class="doc-desc text-white/75">Owns: session protocol, read order, handoff process</div>
         </div>
       </div>
       <div class="flex items-center gap-4">
-        <div class="flex-1 flex items-center gap-3 bg-white/[0.05] rounded-lg px-4 py-2.5 border border-white/[0.1]">
+        <div class="flex-1 flex items-center gap-3 bg-white/[0.05] rounded-lg px-4 py-2.5 border border-white/[0.12]">
           <div class="text-base">&#128279;</div>
-          <div class="text-[11px] text-white/60">
-            <span class="text-white/80 font-semibold">PLAN.md</span> references ARCH for what to build &mdash; never re-describes the architecture.
+          <div class="text-xs text-white/75">
+            <span class="text-white/95 font-semibold">PLAN.md</span> references ARCH for what to build &mdash; never re-describes the architecture.
           </div>
         </div>
-        <div class="flex-1 flex items-center gap-3 bg-white/[0.05] rounded-lg px-4 py-2.5 border border-white/[0.1]">
+        <div class="flex-1 flex items-center gap-3 bg-white/[0.05] rounded-lg px-4 py-2.5 border border-white/[0.12]">
           <div class="text-base">&#128683;</div>
-          <div class="text-[11px] text-white/60">
-            If you're writing something that exists in another doc, <span class="text-white/80 font-semibold">you're doing it wrong.</span>
+          <div class="text-xs text-white/75">
+            If you're writing something that exists in another doc, <span class="text-white/95 font-semibold">you're doing it wrong.</span>
           </div>
         </div>
       </div>
@@ -203,49 +129,49 @@
             <div class="flex items-center gap-3 mb-2">
               <div class="w-7 h-7 rounded-full bg-purple-500/25 flex items-center justify-center text-purple-300 font-mono text-xs font-bold">1</div>
               <span class="font-bold text-purple-300 text-sm">VISION.md</span>
-              <span class="text-[10px] text-white/35 ml-auto">highest level</span>
+              <span class="text-xs text-white/55 ml-auto">highest level</span>
             </div>
-            <p class="text-xs text-white/60 ml-10">What are we building and why? Product scope, target users, pricing, principles.</p>
+            <p class="text-sm text-white/80 ml-10">What are we building and why? Product scope, target users, pricing, principles.</p>
           </div>
           <!-- Level 2: ARCH -->
           <div class="rounded-xl bg-gradient-to-r from-blue-500/[0.12] to-transparent border border-blue-500/30 p-5 ml-6">
             <div class="flex items-center gap-3 mb-2">
               <div class="w-7 h-7 rounded-full bg-blue-500/25 flex items-center justify-center text-blue-300 font-mono text-xs font-bold">2</div>
               <span class="font-bold text-blue-300 text-sm">ARCH.md</span>
-              <span class="text-[10px] text-white/35 ml-auto">system level</span>
+              <span class="text-xs text-white/55 ml-auto">system level</span>
             </div>
-            <p class="text-xs text-white/60 ml-10">How does it work? Mermaid diagrams, component boundaries, DB schema, data flow.</p>
+            <p class="text-sm text-white/80 ml-10">How does it work? Mermaid diagrams, component boundaries, DB schema, data flow.</p>
           </div>
           <!-- Level 3: PLAN -->
           <div class="rounded-xl bg-gradient-to-r from-cyan-500/[0.12] to-transparent border border-cyan-500/30 p-5 ml-12">
             <div class="flex items-center gap-3 mb-2">
               <div class="w-7 h-7 rounded-full bg-cyan-500/25 flex items-center justify-center text-cyan-300 font-mono text-xs font-bold">3</div>
               <span class="font-bold text-cyan-300 text-sm">PLAN.md</span>
-              <span class="text-[10px] text-white/35 ml-auto">execution level</span>
+              <span class="text-xs text-white/55 ml-auto">execution level</span>
             </div>
-            <p class="text-xs text-white/60 ml-10">In what order? Phases, dependencies, exit criteria. <span class="text-white/70">References ARCH &mdash; never re-describes it.</span></p>
+            <p class="text-sm text-white/80 ml-10">In what order? Phases, dependencies, exit criteria. <span class="text-white/90">References ARCH &mdash; never re-describes it.</span></p>
           </div>
         </div>
         <!-- Right side: the key insight -->
         <div class="w-72 shrink-0">
-          <div class="rounded-xl bg-white/[0.05] border border-white/[0.12] p-5 space-y-4">
-            <div class="text-xs text-white/60 font-semibold uppercase tracking-wider">The pattern</div>
+          <div class="rounded-xl bg-white/[0.05] border border-white/[0.15] p-5 space-y-4">
+            <div class="text-xs text-white/75 font-semibold uppercase tracking-wider">The pattern</div>
             <div class="space-y-3">
               <div class="flex items-start gap-2">
-                <span class="text-purple-400 text-xs mt-0.5">&#9679;</span>
-                <span class="text-xs text-white/65"><span class="text-white/90 font-medium">VISION</span> says what to build</span>
+                <span class="text-purple-400 text-sm mt-0.5">&#9679;</span>
+                <span class="text-sm text-white/80"><span class="text-white font-medium">VISION</span> says what to build</span>
               </div>
               <div class="flex items-start gap-2">
-                <span class="text-blue-400 text-xs mt-0.5">&#9679;</span>
-                <span class="text-xs text-white/65"><span class="text-white/90 font-medium">ARCH</span> says how it works</span>
+                <span class="text-blue-400 text-sm mt-0.5">&#9679;</span>
+                <span class="text-sm text-white/80"><span class="text-white font-medium">ARCH</span> says how it works</span>
               </div>
               <div class="flex items-start gap-2">
-                <span class="text-cyan-400 text-xs mt-0.5">&#9679;</span>
-                <span class="text-xs text-white/65"><span class="text-white/90 font-medium">PLAN</span> says what order</span>
+                <span class="text-cyan-400 text-sm mt-0.5">&#9679;</span>
+                <span class="text-sm text-white/80"><span class="text-white font-medium">PLAN</span> says what order</span>
               </div>
             </div>
-            <div class="border-t border-white/[0.1] pt-3">
-              <div class="text-xs text-white/50">Each level zooms in. None repeats what's above.</div>
+            <div class="border-t border-white/[0.12] pt-3">
+              <div class="text-sm text-white/70">Each level zooms in. None repeats what's above.</div>
             </div>
           </div>
         </div>
@@ -257,62 +183,62 @@
       <div class="mb-6">
         <span class="tag border-blue-400/50 text-blue-400 bg-blue-500/15 mb-4">ARCH.md</span>
         <h2 class="text-4xl font-bold mt-4 mb-2">Architecture and diagrams. <span class="gradient-text">That's it.</span></h2>
-        <p class="text-white/60 text-lg">No class-level design. No implementation code. No prose that belongs elsewhere.</p>
+        <p class="text-white/80 text-lg">No class-level design. No implementation code. No prose that belongs elsewhere.</p>
       </div>
       <div class="grid grid-cols-2 gap-6">
         <!-- Left: What ARCH is -->
         <div>
-          <div class="text-[10px] uppercase tracking-widest text-green-400/80 mb-3 font-semibold flex items-center gap-1.5">
+          <div class="text-xs uppercase tracking-widest text-green-400 mb-3 font-semibold flex items-center gap-1.5">
             <span>&#10003;</span> What goes in ARCH
           </div>
           <div class="space-y-2">
-            <div class="flex items-center gap-3 bg-green-500/[0.06] rounded-lg px-4 py-2.5 border border-green-500/20">
+            <div class="flex items-center gap-3 bg-green-500/[0.08] rounded-lg px-4 py-2.5 border border-green-500/25">
               <div class="text-sm">&#128202;</div>
-              <div class="text-xs text-white/75">Mermaid diagrams &mdash; component, flow, sequence level</div>
+              <div class="text-sm text-white/90">Mermaid diagrams &mdash; component, flow, sequence level</div>
             </div>
-            <div class="flex items-center gap-3 bg-green-500/[0.06] rounded-lg px-4 py-2.5 border border-green-500/20">
+            <div class="flex items-center gap-3 bg-green-500/[0.08] rounded-lg px-4 py-2.5 border border-green-500/25">
               <div class="text-sm">&#128194;</div>
-              <div class="text-xs text-white/75">System boundaries &mdash; what talks to what</div>
+              <div class="text-sm text-white/90">System boundaries &mdash; what talks to what</div>
             </div>
-            <div class="flex items-center gap-3 bg-green-500/[0.06] rounded-lg px-4 py-2.5 border border-green-500/20">
+            <div class="flex items-center gap-3 bg-green-500/[0.08] rounded-lg px-4 py-2.5 border border-green-500/25">
               <div class="text-sm">&#128451;&#65039;</div>
-              <div class="text-xs text-white/75">DB schema &mdash; tables, relations, key fields</div>
+              <div class="text-sm text-white/90">DB schema &mdash; tables, relations, key fields</div>
             </div>
-            <div class="flex items-center gap-3 bg-green-500/[0.06] rounded-lg px-4 py-2.5 border border-green-500/20">
+            <div class="flex items-center gap-3 bg-green-500/[0.08] rounded-lg px-4 py-2.5 border border-green-500/25">
               <div class="text-sm">&#128260;</div>
-              <div class="text-xs text-white/75">Data flow &mdash; how information moves through the system</div>
+              <div class="text-sm text-white/90">Data flow &mdash; how information moves through the system</div>
             </div>
           </div>
         </div>
         <!-- Right: What ARCH is NOT -->
         <div>
-          <div class="text-[10px] uppercase tracking-widest text-red-400/80 mb-3 font-semibold flex items-center gap-1.5">
+          <div class="text-xs uppercase tracking-widest text-red-400 mb-3 font-semibold flex items-center gap-1.5">
             <span>&#10007;</span> What does NOT go in ARCH
           </div>
           <div class="space-y-2">
-            <div class="flex items-center gap-3 bg-red-500/[0.06] rounded-lg px-4 py-2.5 border border-red-500/20">
-              <div class="text-sm opacity-50">&#128683;</div>
-              <div class="text-xs text-white/55">Class diagrams or method signatures</div>
+            <div class="flex items-center gap-3 bg-red-500/[0.08] rounded-lg px-4 py-2.5 border border-red-500/25">
+              <div class="text-sm opacity-60">&#128683;</div>
+              <div class="text-sm text-white/75">Class diagrams or method signatures</div>
             </div>
-            <div class="flex items-center gap-3 bg-red-500/[0.06] rounded-lg px-4 py-2.5 border border-red-500/20">
-              <div class="text-sm opacity-50">&#128683;</div>
-              <div class="text-xs text-white/55">Implementation code or pseudo-code</div>
+            <div class="flex items-center gap-3 bg-red-500/[0.08] rounded-lg px-4 py-2.5 border border-red-500/25">
+              <div class="text-sm opacity-60">&#128683;</div>
+              <div class="text-sm text-white/75">Implementation code or pseudo-code</div>
             </div>
-            <div class="flex items-center gap-3 bg-red-500/[0.06] rounded-lg px-4 py-2.5 border border-red-500/20">
-              <div class="text-sm opacity-50">&#128683;</div>
-              <div class="text-xs text-white/55">Product decisions (that's VISION)</div>
+            <div class="flex items-center gap-3 bg-red-500/[0.08] rounded-lg px-4 py-2.5 border border-red-500/25">
+              <div class="text-sm opacity-60">&#128683;</div>
+              <div class="text-sm text-white/75">Product decisions (that's VISION)</div>
             </div>
-            <div class="flex items-center gap-3 bg-red-500/[0.06] rounded-lg px-4 py-2.5 border border-red-500/20">
-              <div class="text-sm opacity-50">&#128683;</div>
-              <div class="text-xs text-white/55">Implementation order (that's PLAN)</div>
+            <div class="flex items-center gap-3 bg-red-500/[0.08] rounded-lg px-4 py-2.5 border border-red-500/25">
+              <div class="text-sm opacity-60">&#128683;</div>
+              <div class="text-sm text-white/75">Implementation order (that's PLAN)</div>
             </div>
           </div>
         </div>
       </div>
       <div class="mt-5 text-center">
-        <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/docs/ARCH.md" class="file-link text-xs font-mono" target="_blank">github.com/.../ARCH.md</a>
-        <span class="text-white/20 mx-3">|</span>
-        <span class="text-[11px] text-white/45">PLAN refs this for what to build. Claude reads it and knows the system.</span>
+        <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/docs/ARCH.md" class="file-link text-sm font-mono" target="_blank">github.com/.../ARCH.md</a>
+        <span class="text-white/30 mx-3">|</span>
+        <span class="text-sm text-white/65">PLAN refs this for what to build. Claude reads it and knows the system.</span>
       </div>
     </section>
 
@@ -321,7 +247,7 @@
       <div class="mb-6">
         <span class="tag border-amber-400/50 text-amber-400 bg-amber-500/15 mb-4">The Payoff</span>
         <h2 class="text-4xl font-bold mt-4 mb-2">The prompt becomes <span class="gradient-text">trivial.</span></h2>
-        <p class="text-white/60 text-lg">Claude reads the docs. The docs <em>are</em> the prompt.</p>
+        <p class="text-white/80 text-lg">Claude reads the docs. The docs <em>are</em> the prompt.</p>
       </div>
       <div class="grid grid-cols-2 gap-6">
         <!-- Left: terminal -->
@@ -330,12 +256,12 @@
             <div class="terminal-dot bg-red-500/70"></div>
             <div class="terminal-dot bg-amber-500/70"></div>
             <div class="terminal-dot bg-green-500/70"></div>
-            <span class="text-[10px] text-white/35 ml-2">claude code</span>
+            <span class="text-xs text-white/50 ml-2">claude code</span>
           </div>
-          <div class="p-5 space-y-4 text-[13px]">
+          <div class="p-5 space-y-4 text-sm">
             <div>
-              <div class="text-amber-400/80 text-[10px] mb-1">SESSION START &mdash; reads automatically:</div>
-              <div class="text-white/40 space-y-0.5">
+              <div class="text-amber-400 text-xs mb-1">SESSION START &mdash; reads automatically:</div>
+              <div class="text-white/60 space-y-0.5">
                 <div>&#10003; WORKFLOW.md</div>
                 <div>&#10003; CODING-STANDARDS.md</div>
                 <div>&#10003; STACK.md &middot; TAXONOMY.md</div>
@@ -343,48 +269,48 @@
                 <div>&#10003; VISION.md &middot; UP_NEXT.md</div>
               </div>
             </div>
-            <div class="border-t border-white/[0.08] pt-4">
-              <div class="text-green-400 mb-1">$ <span class="text-white/80">You:</span></div>
+            <div class="border-t border-white/[0.1] pt-4">
+              <div class="text-green-400 mb-1">$ <span class="text-white/90">You:</span></div>
               <div class="text-white text-lg font-semibold">"Implement Phase 1"</div>
             </div>
             <div>
               <div class="text-blue-400 mb-1">Claude:</div>
-              <div class="text-white/60 text-[12px] leading-relaxed">
+              <div class="text-white/75 text-[13px] leading-relaxed">
                 I see Phase 1 in PLAN.md covers auth<br>
                 + credential storage. ARCH.md shows the<br>
                 schema and encryption flow. Starting with<br>
-                the Kalshi REST client...<span class="animate-pulse text-white/50">&#9608;</span>
+                the Kalshi REST client...<span class="animate-pulse text-white/60">&#9608;</span>
               </div>
             </div>
           </div>
         </div>
         <!-- Right: explanation -->
         <div class="space-y-4">
-          <div class="rounded-xl bg-white/[0.05] border border-white/[0.1] p-5">
-            <div class="text-sm font-semibold text-white/85 mb-2">Why this works</div>
-            <ul class="space-y-2.5 text-xs text-white/60">
+          <div class="rounded-xl bg-white/[0.05] border border-white/[0.12] p-5">
+            <div class="text-base font-semibold text-white/95 mb-2">Why this works</div>
+            <ul class="space-y-2.5 text-sm text-white/80">
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5 shrink-0">&#9654;</span>
-                <span><span class="text-white/80">ARCH</span> already describes the system &mdash; Claude doesn't guess</span>
+                <span><span class="text-white">ARCH</span> already describes the system &mdash; Claude doesn't guess</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5 shrink-0">&#9654;</span>
-                <span><span class="text-white/80">PLAN</span> already has exit criteria &mdash; Claude knows when it's done</span>
+                <span><span class="text-white">PLAN</span> already has exit criteria &mdash; Claude knows when it's done</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5 shrink-0">&#9654;</span>
-                <span><span class="text-white/80">TAXONOMY</span> has canonical names &mdash; Claude uses the right terms</span>
+                <span><span class="text-white">TAXONOMY</span> has canonical names &mdash; Claude uses the right terms</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-blue-400 mt-0.5 shrink-0">&#9654;</span>
-                <span><span class="text-white/80">CODING-STANDARDS</span> has quality bars &mdash; Claude writes production code</span>
+                <span><span class="text-white">CODING-STANDARDS</span> has quality bars &mdash; Claude writes production code</span>
               </li>
             </ul>
           </div>
-          <div class="rounded-xl bg-amber-500/[0.08] border border-amber-500/25 p-4">
-            <div class="text-xs text-amber-300">
+          <div class="rounded-xl bg-amber-500/[0.1] border border-amber-500/30 p-4">
+            <div class="text-sm text-amber-300">
               The investment is in the docs, not the prompt.<br>
-              <span class="text-white/50">Better docs = better output. Every time.</span>
+              <span class="text-white/70">Better docs = better output. Every time.</span>
             </div>
           </div>
         </div>
@@ -396,7 +322,7 @@
       <div class="mb-6">
         <span class="tag border-cyan-400/50 text-cyan-400 bg-cyan-500/15 mb-4">Iteration</span>
         <h2 class="text-4xl font-bold mt-4 mb-2">MVP ships. Then <span class="gradient-text">iterate again.</span></h2>
-        <p class="text-white/60 text-lg">Create <span class="font-mono text-white/70">docs/v1/</span> &mdash; same structure, next version.</p>
+        <p class="text-white/80 text-lg">Create <span class="font-mono text-white/90">docs/v1/</span> &mdash; same structure, next version.</p>
       </div>
       <div class="grid grid-cols-2 gap-6">
         <!-- Left: directory structure -->
@@ -405,38 +331,38 @@
             <div class="terminal-dot bg-red-500/70"></div>
             <div class="terminal-dot bg-amber-500/70"></div>
             <div class="terminal-dot bg-green-500/70"></div>
-            <span class="text-[10px] text-white/35 ml-2">project structure</span>
+            <span class="text-xs text-white/50 ml-2">project structure</span>
           </div>
-          <div class="p-5 text-[12px] leading-relaxed">
-            <div class="text-white/50">saas/</div>
-            <div class="text-white/50">&boxvr;&HorizontalLine;&HorizontalLine; docs/                  <span class="text-white/30"># MVP &mdash; current arch</span></div>
-            <div class="text-white/65">&boxv;   &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-blue-400/80">ARCH.md</span>          <span class="text-white/30"># system of record</span></div>
-            <div class="text-white/65">&boxv;   &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-cyan-400/80">PLAN.md</span>          <span class="text-white/30"># refs ARCH</span></div>
-            <div class="text-white/65">&boxv;   &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-purple-400/80">VISION.md</span>        <span class="text-white/30"># product scope</span></div>
-            <div class="text-white/65">&boxv;   &boxur;&HorizontalLine;&HorizontalLine; ...</div>
-            <div class="text-white/40">&boxv;</div>
-            <div class="text-amber-400">&boxur;&HorizontalLine;&HorizontalLine; docs/v1/               <span class="text-amber-400/60"># NEXT version</span></div>
-            <div class="text-amber-300/80">    &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-amber-300">v1_ARCH.md</span>       <span class="text-amber-400/45"># future state diff</span></div>
-            <div class="text-amber-300/80">    &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-amber-300">v1_PLAN.md</span>       <span class="text-amber-400/45"># refs v1_ARCH + ARCH</span></div>
-            <div class="text-amber-300/80">    &boxur;&HorizontalLine;&HorizontalLine; <span class="text-amber-300">v1_VISION.md</span>     <span class="text-amber-400/45"># what's new in v1</span></div>
+          <div class="p-5 text-[13px] leading-relaxed">
+            <div class="text-white/70">saas/</div>
+            <div class="text-white/70">&boxvr;&HorizontalLine;&HorizontalLine; docs/                  <span class="text-white/50"># MVP &mdash; current arch</span></div>
+            <div class="text-white/80">&boxv;   &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-blue-400">ARCH.md</span>          <span class="text-white/50"># system of record</span></div>
+            <div class="text-white/80">&boxv;   &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-cyan-400">PLAN.md</span>          <span class="text-white/50"># refs ARCH</span></div>
+            <div class="text-white/80">&boxv;   &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-purple-400">VISION.md</span>        <span class="text-white/50"># product scope</span></div>
+            <div class="text-white/80">&boxv;   &boxur;&HorizontalLine;&HorizontalLine; ...</div>
+            <div class="text-white/55">&boxv;</div>
+            <div class="text-amber-400">&boxur;&HorizontalLine;&HorizontalLine; docs/v1/               <span class="text-amber-400/75"># NEXT version</span></div>
+            <div class="text-amber-300">    &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-amber-300">v1_ARCH.md</span>       <span class="text-amber-400/65"># future state diff</span></div>
+            <div class="text-amber-300">    &boxvr;&HorizontalLine;&HorizontalLine; <span class="text-amber-300">v1_PLAN.md</span>       <span class="text-amber-400/65"># refs v1_ARCH + ARCH</span></div>
+            <div class="text-amber-300">    &boxur;&HorizontalLine;&HorizontalLine; <span class="text-amber-300">v1_VISION.md</span>     <span class="text-amber-400/65"># what's new in v1</span></div>
           </div>
         </div>
         <!-- Right: explanation -->
         <div class="space-y-4">
-          <div class="rounded-xl bg-white/[0.05] border border-white/[0.1] p-5">
-            <div class="text-sm font-semibold text-white/85 mb-3">How v1_ARCH.md works</div>
-            <ul class="space-y-2.5 text-xs text-white/60">
+          <div class="rounded-xl bg-white/[0.05] border border-white/[0.12] p-5">
+            <div class="text-base font-semibold text-white/95 mb-3">How v1_ARCH.md works</div>
+            <ul class="space-y-2.5 text-sm text-white/80">
               <li class="flex items-start gap-2">
                 <span class="text-amber-400 mt-0.5 shrink-0">&#9654;</span>
-                <span>Shows the <span class="text-white/80">future state</span> of the architecture</span>
+                <span>Shows the <span class="text-white">future state</span> of the architecture</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-400 mt-0.5 shrink-0">&#9654;</span>
-                <span><span class="text-white/80">References</span> project-level ARCH &mdash; doesn't duplicate it</span>
+                <span><span class="text-white">References</span> project-level ARCH &mdash; doesn't duplicate it</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-400 mt-0.5 shrink-0">&#9654;</span>
-                <span>Only describes <span class="text-white/80">what changes</span> &mdash; an architecture diff</span>
+                <span>Only describes <span class="text-white">what changes</span> &mdash; an architecture diff</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-400 mt-0.5 shrink-0">&#9654;</span>
@@ -444,12 +370,12 @@
               </li>
             </ul>
           </div>
-          <div class="rounded-xl bg-cyan-500/[0.08] border border-cyan-500/25 p-4">
+          <div class="rounded-xl bg-cyan-500/[0.1] border border-cyan-500/30 p-4">
             <div class="flex items-center gap-2 mb-2">
               <div class="text-sm">&#128257;</div>
-              <div class="text-xs text-cyan-300 font-semibold">The cycle repeats</div>
+              <div class="text-sm text-cyan-300 font-semibold">The cycle repeats</div>
             </div>
-            <div class="text-[11px] text-white/50 leading-relaxed">
+            <div class="text-sm text-white/70 leading-relaxed">
               Write v1 docs &rarr; <span class="font-mono text-cyan-400">"Implement Phase 1"</span> &rarr; ship &rarr; write v2 docs &rarr; repeat.<br>
               Same system. Every version. Scales forever.
             </div>
@@ -463,41 +389,41 @@
       <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
       <div class="relative z-10 text-center">
         <h2 class="text-5xl font-black mb-4">This is how I build now.</h2>
-        <p class="text-xl text-white/60 max-w-lg mx-auto leading-relaxed mb-8">
+        <p class="text-xl text-white/80 max-w-lg mx-auto leading-relaxed mb-8">
           The docs <em>are</em> the prompt. The AI <em>is</em> the engineer.<br>
           The system scales to any project, any version.
         </p>
         <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="flex items-center gap-3 bg-white/[0.06] rounded-xl px-5 py-3.5 border border-white/[0.12]">
+          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15]">
             <div class="text-lg">&#128196;</div>
             <div class="text-left">
-              <div class="text-sm font-semibold text-white/85">Docs drive decisions</div>
-              <div class="text-[10px] text-white/45">not chat history</div>
+              <div class="text-sm font-semibold text-white/95">Docs drive decisions</div>
+              <div class="text-xs text-white/65">not chat history</div>
             </div>
           </div>
-          <div class="flex items-center gap-3 bg-white/[0.06] rounded-xl px-5 py-3.5 border border-white/[0.12]">
+          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15]">
             <div class="text-lg">&#128683;</div>
             <div class="text-left">
-              <div class="text-sm font-semibold text-white/85">No duplication</div>
-              <div class="text-[10px] text-white/45">everything has its place</div>
+              <div class="text-sm font-semibold text-white/95">No duplication</div>
+              <div class="text-xs text-white/65">everything has its place</div>
             </div>
           </div>
-          <div class="flex items-center gap-3 bg-white/[0.06] rounded-xl px-5 py-3.5 border border-white/[0.12]">
+          <div class="flex items-center gap-3 bg-white/[0.07] rounded-xl px-5 py-3.5 border border-white/[0.15]">
             <div class="text-lg">&#128257;</div>
             <div class="text-left">
-              <div class="text-sm font-semibold text-white/85">Same system, every version</div>
-              <div class="text-[10px] text-white/45">docs/ &rarr; docs/v1/ &rarr; docs/v2/</div>
+              <div class="text-sm font-semibold text-white/95">Same system, every version</div>
+              <div class="text-xs text-white/65">docs/ &rarr; docs/v1/ &rarr; docs/v2/</div>
             </div>
           </div>
         </div>
         <!-- Links -->
-        <div class="flex items-center justify-center gap-6 text-xs font-mono">
+        <div class="flex items-center justify-center gap-6 text-sm font-mono">
           <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/WORKFLOW.md" class="file-link" target="_blank">WORKFLOW.md</a>
           <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/docs/ARCH.md" class="file-link" target="_blank">ARCH.md</a>
           <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/docs/PLAN.md" class="file-link" target="_blank">PLAN.md</a>
           <a href="https://github.com/operator-auteng-ai/quantreno/blob/main/saas/docs/VISION.md" class="file-link" target="_blank">VISION.md</a>
         </div>
-        <div class="mt-6 text-sm text-white/40">
+        <div class="mt-6 text-sm text-white/60">
           Follow along &mdash; more workflow breakdowns coming.
         </div>
       </div>
@@ -510,7 +436,7 @@
     const total = document.querySelectorAll('.slide').length;
     document.querySelectorAll('.slide').forEach((slide, i) => {
       const label = document.createElement('div');
-      label.className = 'absolute bottom-4 right-6 text-xs font-mono text-white/25';
+      label.className = 'absolute bottom-4 right-6 text-xs font-mono text-white/40';
       label.textContent = `${i + 1} / ${total}`;
       slide.appendChild(label);
     });
